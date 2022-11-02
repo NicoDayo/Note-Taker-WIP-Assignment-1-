@@ -10,7 +10,7 @@ body{
     justify-content: center;
     color: #483D8B;
     font-family: 'Montserrat', sans-serif;
-    font-size: 24px;
+    font-size: 36px;
 }
 
 #Ulist
@@ -19,7 +19,7 @@ body{
             display: flex;
             list-style: none;
             justify-content: flex-end;
-            font-size: 12px;
+            font-size: 16px;
             padding-top: 50px;
         }
 
@@ -65,11 +65,9 @@ grid-column: 1/2;
     font-size: 14px;
     text-align: center;
     color: white;
-    text-shadow: 1px 1px 3px black;
     border-radius: 12px;
-    background-color: #6acbf5;
-    box-shadow: inset 2px 2px 3px #0F97D2,
-                inset -2px -2px 3px #0F97D2;
+    background-color: #10A5E5;
+
 }
 #Darkmode {
     border: 0;
@@ -78,11 +76,9 @@ grid-column: 1/2;
     font-size: 14px;
     text-align: center;
     color: white;
-    text-shadow: 1px 1px 3px grey;
     border-radius: 12px;
     background-color: grey;
-    box-shadow: inset 2px 2px 3px white,
-                inset -2px -2px 3px black;
+
 }
 
 #Newnote:hover {
@@ -93,8 +89,48 @@ grid-column: 1/2;
     background-color:black;
 }
 
-.buttons{
-    padding: 20px;
+.buttons-top{
+    display: flex;
+    justify-content: space-between;
+padding: 20px;
+}
+
+#Cancel {
+    border: 0;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 14px;
+    text-align: center;
+    color: white;;
+    border-radius: 12px;
+    background-color: #2883A4;
+
+}
+#Save {
+    border: 0;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 14px;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 3px grey;
+    border-radius: 12px;
+    background-color: #E97BAB;
+
+}
+
+#Save:hover {
+    background-color:#E1357F;
+}
+
+#Cancel:hover {
+    background-color: #16495B;
+}
+.buttons-bot{
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+padding: 20px;
 }
 
 
