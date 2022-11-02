@@ -2,7 +2,7 @@ body{
     background-color: #effbf2;
     display:grid;
     grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 0.5fr 5fr;
+    grid-template-rows: 0.5fr 3fr;
 }
 
 .head
@@ -11,6 +11,7 @@ body{
     color: #483D8B;
     font-family: 'Montserrat', sans-serif;
     font-size: 36px;
+    padding: 20px;
 }
 
 #Ulist
@@ -34,7 +35,7 @@ a
             display: flex;
             flex-direction: column;
             justify-content: center;
-            font-size: 12px;
+            font-size: 14px;
             padding: 10px;
         }
 
@@ -131,6 +132,12 @@ padding: 20px;
     justify-content: flex-end;
     gap: 30px;
 padding: 20px;
+}
+
+footer{
+display: flex;
+justify-content: center;
+grid-row: 3/5;
 }
 
 
