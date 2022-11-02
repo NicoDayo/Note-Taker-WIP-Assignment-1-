@@ -1,15 +1,16 @@
 body{
     background-color: #effbf2;
-    display:gird;
+    display:grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 0.5fr 5fr;
 }
 
 .head
-{
-    color: #483D8B;
+{   display: flex;
     justify-content: center;
+    color: #483D8B;
     font-family: 'Montserrat', sans-serif;
     font-size: 24px;
-    display: flex;
 }
 
 #Ulist
@@ -17,10 +18,15 @@ body{
             font-family: 'Montserrat', sans-serif;
             display: flex;
             list-style: none;
-            flex-direction: row;
             justify-content: flex-end;
             font-size: 12px;
+            padding-top: 50px;
         }
+
+a
+{
+    text-decoration: none;
+}
 
 #Ulist2
         {
@@ -29,12 +35,66 @@ body{
             flex-direction: column;
             justify-content: center;
             font-size: 12px;
+            padding: 10px;
         }
 
 li{
 margin: 9px;
 }
 
+#textbox{
+margin: 20px;
+}
+
 #sidebar{
 background-color: #b6f6d9;
+border-radius: 5px;
+grid-row: 1/5;
+grid-column: 1/2;
 }
+
+.side{
+    display: flex;
+    justify-content: flex-start;
+}
+
+#Newnote {
+    border: 0;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 14px;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 3px black;
+    border-radius: 12px;
+    background-color: #6acbf5;
+    box-shadow: inset 2px 2px 3px #0F97D2,
+                inset -2px -2px 3px #0F97D2;
+}
+#Darkmode {
+    border: 0;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 14px;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 3px grey;
+    border-radius: 12px;
+    background-color: grey;
+    box-shadow: inset 2px 2px 3px white,
+                inset -2px -2px 3px black;
+}
+
+#Newnote:hover {
+    background-color:#0F97D2;
+}
+
+#Darkmode:hover {
+    background-color:black;
+}
+
+.buttons{
+    padding: 20px;
+}
+
+
