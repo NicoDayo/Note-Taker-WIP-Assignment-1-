@@ -1,6 +1,39 @@
 body{
-    background-color: #f9f3ec;
+    background-color: #effbf2;
 }
-h1{
-    font-family:Mon
+
+.head
+{
+    color: #483D8B;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    display: flex;
+}
+
+#Ulist
+        {
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            list-style: none;
+            flex-direction: row;
+            justify-content: flex-end;
+            font-size: 12px;
+        }
+
+#Ulist2
+        {
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 12px;
+        }
+
+li{
+margin: 9px;
+}
+
+#sidebar{
+background-color: #b6f6d9;
 }
