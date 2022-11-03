@@ -1,8 +1,10 @@
+/* ===MOBILE VERSION - for dimensions less than 600px*/
+
 body{
     background-color: #effbf2;
     display:grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 0.5fr 3fr;
+    grid-template-columns:0.5fr 1fr 1fr;
+    grid-template-rows: 1fr;
 }
 
 .head
@@ -12,6 +14,7 @@ body{
     font-family: 'Montserrat', sans-serif;
     font-size: 36px;
     padding: 20px;
+    padding-top: 90px;
 }
 
 #Ulist
@@ -19,9 +22,8 @@ body{
             font-family: 'Montserrat', sans-serif;
             display: flex;
             list-style: none;
-            justify-content: flex-end;
             font-size: 16px;
-            padding-top: 50px;
+            padding-top: 200px;
         }
 
 a
@@ -44,7 +46,9 @@ margin: 9px;
 }
 
 #textbox{
+display: grid;
 margin: 20px;
+grid-column: 1/4;
 }
 
 #sidebar{
@@ -93,7 +97,8 @@ grid-column: 1/2;
 .buttons-top{
     display: flex;
     justify-content: space-between;
-padding: 20px;
+    padding: 10px;
+    gap: 20px;;
 }
 
 #Cancel {
@@ -141,3 +146,157 @@ grid-row: 3/5;
 }
 
 
+
+
+
+
+
+
+
+
+@media (min-width: 600px)
+{
+    body{
+        background-color: #effbf2;
+        display:grid;
+        grid-template-columns: 0.5fr 3fr 1fr;
+        grid-template-rows: 0.5fr 3fr;
+    }
+
+    .head
+    {   display: flex;
+        justify-content: center;
+        color: #483D8B;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 36px;
+        padding: 20px;
+    }
+
+    #Ulist
+            {
+                font-family: 'Montserrat', sans-serif;
+                display: flex;
+                list-style: none;
+                justify-content: flex-end;
+                font-size: 16px;
+                padding-top: 50px;
+            }
+
+    a
+    {
+        text-decoration: none;
+    }
+
+    #Ulist2
+            {
+                font-family: 'Montserrat', sans-serif;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                font-size: 14px;
+                padding: 10px;
+            }
+
+    li{
+    margin: 9px;
+    }
+
+    #textbox{
+    margin: 20px;
+
+    }
+
+    #sidebar{
+    background-color: #b6f6d9;
+    border-radius: 5px;
+    grid-row: 1/5;
+    grid-column: 1/2;
+    }
+
+    .side{
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    #Newnote {
+        border: 0;
+        height: 40px;
+        padding: 0 20px;
+        font-size: 14px;
+        text-align: center;
+        color: white;
+        border-radius: 12px;
+        background-color: #10A5E5;
+
+    }
+    #Darkmode {
+        border: 0;
+        height: 40px;
+        padding: 0 20px;
+        font-size: 14px;
+        text-align: center;
+        color: white;
+        border-radius: 12px;
+        background-color: grey;
+
+    }
+
+    #Newnote:hover {
+        background-color:#0F97D2;
+    }
+
+    #Darkmode:hover {
+        background-color:black;
+    }
+
+    .buttons-top{
+        display: flex;
+        justify-content: space-between;
+    padding: 20px;
+    }
+
+    #Cancel {
+        border: 0;
+        height: 40px;
+        padding: 0 20px;
+        font-size: 14px;
+        text-align: center;
+        color: white;;
+        border-radius: 12px;
+        background-color: #2883A4;
+
+    }
+    #Save {
+        border: 0;
+        height: 40px;
+        padding: 0 20px;
+        font-size: 14px;
+        text-align: center;
+        color: white;
+        text-shadow: 1px 1px 3px grey;
+        border-radius: 12px;
+        background-color: #E97BAB;
+
+    }
+
+    #Save:hover {
+        background-color:#E1357F;
+    }
+
+    #Cancel:hover {
+        background-color: #16495B;
+    }
+    .buttons-bot{
+        display: flex;
+        justify-content: flex-end;
+        gap: 30px;
+    padding: 20px;
+    }
+
+    footer{
+    display: flex;
+    justify-content: center;
+    grid-row: 3/5;
+    padding-bottom:75px;
+    }
+}
