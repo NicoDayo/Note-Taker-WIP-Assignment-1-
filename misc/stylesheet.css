@@ -7,13 +7,19 @@ body{
     grid-template-rows: 1fr;
 }
 
-.head
+aside{
+    background-color: #b6f6d9;
+    border-radius: 5px;
+    grid-row: 1/8;
+    grid-column: 1/2;
+    }
+
+h1, h2
 {   text-align: center;
     color: #483D8B;
     font-family: 'Montserrat', sans-serif;
     font-size: 36px;
     padding: 20px;
-    padding-top: 90px;
 }
 
 #Ulist
@@ -22,13 +28,8 @@ body{
             display: flex;
             list-style: none;
             font-size: 16px;
-            padding-top: 200px;
+            padding-top: 100px;
         }
-
-a
-{
-    text-decoration: none;
-}
 
 #Ulist2
         {
@@ -49,18 +50,6 @@ margin: 9px;
 display: grid;
 margin: 20px;
 grid-column: 1/4;
-}
-
-aside{
-background-color: #b6f6d9;
-border-radius: 5px;
-grid-row: 1/8;
-grid-column: 1/2;
-}
-
-.side{
-    display: flex;
-    justify-content: flex-start;
 }
 
 #Newnote {
@@ -132,6 +121,7 @@ grid-column: 1/2;
 #Cancel:hover {
     background-color: #16495B;
 }
+
 .buttons-bot{
     display: flex;
     justify-content: flex-end;
@@ -143,6 +133,7 @@ footer{
 display: flex;
 justify-content: center;
 grid-row: 3/5;
+padding-bottom: 400px;
 }
 
 
@@ -151,19 +142,28 @@ grid-row: 3/5;
 @media (min-width: 600px)
 {
     body{
+        height: 100%;
         background-color: #effbf2;
         display:grid;
         grid-template-columns: 0.5fr 3fr 1fr;
         grid-template-rows: 0.5fr 3fr;
     }
 
-    .head
+    h1, h2
     {   text-align: center;
         color: #483D8B;
         font-family: 'Montserrat', sans-serif;
         font-size: 36px;
         padding: 20px;
     }
+
+    aside{
+        background-color: #b6f6d9;
+        border-radius: 5px;
+        grid-row: 1/5;
+        grid-column: 1/2;
+        padding-bottom: 425px;
+        }
 
     #Ulist
             {
@@ -174,11 +174,6 @@ grid-row: 3/5;
                 font-size: 16px;
                 padding-top: 50px;
             }
-
-    a
-    {
-        text-decoration: none;
-    }
 
     #Ulist2
             {
@@ -197,20 +192,8 @@ grid-row: 3/5;
 
     #textbox{
     margin: 20px;
-
     }
 
-    #sidebar{
-    background-color: #b6f6d9;
-    border-radius: 5px;
-    grid-row: 1/5;
-    grid-column: 1/2;
-    }
-
-    .side{
-        display: flex;
-        justify-content: flex-start;
-    }
 
     #Newnote {
         border: 0;
@@ -291,6 +274,6 @@ grid-row: 3/5;
     display: flex;
     justify-content: center;
     grid-row: 3/5;
-    padding-bottom:75px;
+    padding-bottom:90px;
     }
 }
