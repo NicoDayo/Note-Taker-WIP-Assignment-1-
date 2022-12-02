@@ -9,52 +9,54 @@
     <title>Note Taking</title>
 </head>
 <body>
-    <header>
-        <h1>Take Better Notes</h1>
-    </header>
-    <nav>
-        <ul id="Ulist">
-            <li>
-            <a href="">
-            <b>About</b></a>
-            </li>
-            <li>
-            <a href="">
-            <b>Docs</b></a>
-            </li>
-        </ul>
-    </nav>
     <aside>
         <h2>My Notes</h2>
-        <nav>
-            <ul id="Ulist2">
-                <li>
-                <a href="">
-                <b>Note One</b></a>
-                </li>
-                <li>
-                <a href="">
-                <b>Note Two</b></a>
-                </li>
-            </ul>
-        </nav>
+        <ul>
+            <li>
+            <a href="">
+            <b>Note One</b></a>
+            </li>
+            <li>
+            <a href="">
+            <b>Note Two</b></a>
+            </li>
+        </ul>
     </aside>
-    <main>
+
+    <div id="mainpagecontainer">
+        <header>
+            <h1>Take Better Notes</h1>
+            <nav>
+                <ul id="Ulist">
+                    <li>
+                    <a href="">
+                    <b>About</b></a>
+                    </li>
+                    <li>
+                    <a href="">
+                    <b>Docs</b></a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
         <div class="buttons-top">
             <button id="Newnote"
                 type="button">
                 New Note
             </button>
+
             <button id="Darkmode"
                 type="button">
                 Dark Mode
             </button>
-            </div>
-        <div id="textbox">
+        </div>
+
+        <main>
             <textarea id="notes" name="notes" 
             rows="8" cols="150"> This is a placeholder
             </textarea>
-        </div>
+        </main>
+
         <div class="buttons-bot">
             <button id="Save"
                 type="button">
@@ -65,10 +67,10 @@
                 Cancel
             </button>
             </div>
-    </main>
-    <footer>
-        <a href=""><img src ="img/linkedin_circle_color-512.png" alt="Image" width="60"></a>
-        <a href=""> <img src ="img/Internet_Line-02-512.png" alt="Image" width="60"> </a>
-    </footer>
+        <footer>
+                <a href=""><img src ="img/linkedin_circle_color-512.png" alt="Image" width="60"></a>
+                <a href=""> <img src ="img/Internet_Line-02-512.png" alt="Image" width="60"> </a>
+        </footer>
+    </div>
 </body>
 </html>

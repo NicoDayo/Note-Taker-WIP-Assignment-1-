@@ -1,48 +1,64 @@
 /* ===MOBILE VERSION - for dimensions less than 600px*/
  body{
-    margin:0;
-     background-color: #effbf2;
      display:grid;
-     grid-template-columns:0.5fr 1fr 1fr;
-     grid-template-rows: 1fr;
+     margin: 0px;
+     background-color: #effbf2;
+     grid-template-columns: 30% 100px;
+ }
+
+aside ul{
+    list-style: square;
 }
- aside{
+aside{
+    margin: 0px;
+     font-family: 'Montserrat', sans-serif;
      background-color: #b6f6d9;
-     border-radius: 5px;
-     grid-row: 1/8;
-     grid-column: 1/2;
+     font-size: 14px;
+     grid-column: 1;
 }
- h1, h2 {
+
+#mainpagecontainer{
+    display:grid;
+    grid-template-rows: 200px 50px 100px 100px 50px;
+}
+
+header #Ulist{
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    list-style: none;
+    font-size: 16px;
+}
+
+
+main{
+    display: grid;
+    margin: 20px;
+}
+
+
+
+footer{
+    display: flex;
+    justify-content: center;
+}
+
+ h1, h2{
      text-align: center;
      color: #483D8B;
      font-family: 'Montserrat', sans-serif;
-     font-size: 36px;
+     font-size: 30px;
      padding: 20px;
-}
- #Ulist {
-     font-family: 'Montserrat', sans-serif;
-     display: flex;
-     list-style: none;
-     font-size: 16px;
-     padding-top: 100px;
-}
- #Ulist2 {
-     font-family: 'Montserrat', sans-serif;
-     display: flex;
-     list-style: square;
-     flex-direction: column;
-     justify-content: center;
-     font-size: 14px;
-     padding: 10px;
 }
 
  li{
      margin: 9px;
 }
- #textbox{
-     display: grid;
-     margin: 20px;
-     grid-column: 1/4;
+
+textarea{
+display: grid;
+border: solid;
+border-color: #483D8B;
+border-radius: 6px;
 }
 
 button{
@@ -63,6 +79,12 @@ button{
      background-color: grey;
 }
 
+.buttons-top{
+    display: flex;
+    padding: 10px;
+    gap: 20px;
+}
+
  #Newnote:hover {
      background-color:#0F97D2;
 }
@@ -71,12 +93,6 @@ button{
      background-color:black;
 }
 
- .buttons-top{
-     display: flex;
-     justify-content: space-between;
-     padding: 10px;
-     gap: 20px;
-}
 
  #Cancel {
      background-color: #2883A4;
@@ -84,6 +100,12 @@ button{
 
  #Save {
      background-color: #E97BAB;
+}
+
+.buttons-bot{
+    display: flex;
+    gap: 20px;
+    padding: 20px;
 }
 
  #Save:hover {
@@ -94,18 +116,7 @@ button{
      background-color: #16495B;
 }
 
- .buttons-bot{
-     display: flex;
-     justify-content: flex-end;
-     gap: 30px;
-     padding: 20px;
-}
- footer{
-     display: flex;
-     justify-content: center;
-     grid-row: 3/5;
-     padding-bottom: 400px;
-}
+
 /* DESKTOP VERSION */
  @media (min-width: 600px) {
      body{
@@ -115,6 +126,7 @@ button{
          grid-template-columns: 0.5fr 3fr 1fr;
          grid-template-rows: 0.5fr 3fr;
     }
+
      h1, h2 {
          text-align: center;
          color: #483D8B;
@@ -129,23 +141,7 @@ button{
          grid-column: 1/2;
          padding-bottom: 425px;
     }
-     #Ulist {
-         font-family: 'Montserrat', sans-serif;
-         display: flex;
-         list-style: none;
-         justify-content: flex-end;
-         font-size: 16px;
-         padding-top: 50px;
-    }
-     #Ulist2 {
-         font-family: 'Montserrat', sans-serif;
-         display: flex;
-         list-style: square;
-         flex-direction: column;
-         justify-content: center;
-         font-size: 14px;
-         padding: 10px;
-    }
+
      li{
          margin: 9px;
     }
