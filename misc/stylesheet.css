@@ -7,10 +7,10 @@
  }
 
  /* SIDEBAR */
-aside ul{
+ aside ul{
     list-style: square;
 }
-aside{
+.sidebar{
      margin: 0px;
      font-family: 'Montserrat', sans-serif;
      background-color: #b6f6d9;
@@ -120,16 +120,18 @@ footer{
 /* JS darktoggle classes */
 
 .dark{
-    background-color: #011314;
-}
-
-.darkmodefont{
-    color: #a5cae1;
+    background-color: #000000;
 }
 
 .dark3{
-background-color: #004247;
+    background-color: #380202;
 }
+
+.darkmodefont{
+    color: #f2f4f5;
+}
+
+
 
 /* DESKTOP VERSION */
 @media only screen and (min-width: 600px){
@@ -142,15 +144,7 @@ background-color: #004247;
     aside ul{
         list-style: square;
     }
-    aside
-    {
-    margin: 0px;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #b6f6d9;
-    font-size: 14px;
-    height: 100vh;
-    grid-column: 1;
-    }
+    
     h1, h2{
         text-align: center;
         color: #483D8B;
