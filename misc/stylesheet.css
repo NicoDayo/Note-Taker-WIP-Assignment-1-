@@ -67,11 +67,11 @@ button{
     border-radius: 12px;
 }
 
- #Newnote {
+ .Newnote {
      background-color: #10A5E5;
 }
 
- #Darkmode {
+ .Darkmode {
      background-color: grey;
 }
 
@@ -81,20 +81,20 @@ button{
     gap: 20px;
 }
 
- #Newnote:hover {
+ .Newnote:hover {
      background-color:#0F97D2;
 }
 
- #Darkmode:hover {
+ .Darkmode:hover {
      background-color:black;
 }
 
 
- #Cancel {
+ .Cancel {
      background-color: #2883A4;
 }
 
- #Save {
+ .Save {
      background-color: #E97BAB;
 }
 
@@ -104,11 +104,11 @@ button{
     padding: 20px;
 }
 
- #Save:hover {
+ .Save:hover {
      background-color:#E1357F;
 }
 
- #Cancel:hover {
+ .Cancel:hover {
      background-color: #16495B;
 }
 
@@ -117,13 +117,13 @@ footer{
     justify-content: center;
 }
 
-/* JS darktoggle classes */
+/*================= JS darktoggle classes ===================== */
 
-.dark{
+.darkmain{
     background-color: #000000;
 }
 
-.dark3{
+.darksidebar{
     background-color: #380202;
 }
 
@@ -131,6 +131,21 @@ footer{
     color: #f2f4f5;
 }
 
+.dark_newnote{
+    background-color:#022839;
+}
+
+.dark_darkmode{
+    background-color: #414040;
+}
+
+.dark_save{
+    background-color: darkred;
+}
+
+.dark_cancel{
+    background-color: #1d135e;
+}
 
 
 /* DESKTOP VERSION */
@@ -144,7 +159,7 @@ footer{
     aside ul{
         list-style: square;
     }
-    
+
     h1, h2{
         text-align: center;
         color: #483D8B;
