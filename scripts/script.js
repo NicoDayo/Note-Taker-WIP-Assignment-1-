@@ -26,12 +26,12 @@ function toggledark()
    DM_noteheader.classList.toggle('darkmodefont')
    DM_sidebullets.classList.toggle('darkmodefont')
    DM_sidebar.classList.toggle('darksidebar')
+
    DM_newnote.classList.toggle('dark_newnote')
    DM_darkmode.classList.toggle('dark_darkmode')
    DM_save.classList.toggle('dark_save')
-   DM_cancel.classList.toggle('dark_cancel')
+   DM_cancel.classList.toggle('dark_cancel');
    
-
       var headlink = DM_headerlinks
       {for (var i=0; i < headlink.length; i++){
       headlink[i].classList.toggle('darkmodefont')}} //goes through each a-tag in Ulist
@@ -39,7 +39,11 @@ function toggledark()
       var sidelink = DM_sidenotes
       {for (var i=0; i < sidelink.length; i++){
       sidelink[i].classList.toggle('darkmodefont')}} //goes through each side note a-tag
-   
-   
-}
+      
+      if (darkmodebutton.textContent == "Light Mode")
+      {darkmodebutton.textContent = "Dark Mode"}
+      else{
+         darkmodebutton.textContent = "Light Mode"
+      };
+};
 darkmodebutton.addEventListener('click', toggledark)
