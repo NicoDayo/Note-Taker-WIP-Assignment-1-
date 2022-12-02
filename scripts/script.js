@@ -47,3 +47,25 @@ function toggledark()
       };
 };
 darkmodebutton.addEventListener('click', toggledark)
+
+// ====== CANCEL BUTTON FUNCTIONALITY ==========
+// ====== constants ========
+const CancelBut = document.querySelector('.Cancel')
+const textbox = document.querySelector('main') // textbox
+const bottom_buttons = document.querySelector('.buttons-bot') // save and cancel buttons
+
+function cancel(){
+   textbox.style.visibility = 'hidden'
+   bottom_buttons.style.visibility = 'hidden'
+}
+CancelBut.addEventListener('click', cancel);
+
+//======= New Note Toggle ============
+
+const NewnoteBut = document.querySelector('.Newnote')
+
+function newnotetoggle(){
+   textbox.style.visibility = 'visible'
+   bottom_buttons.style.visibility = 'visible'
+}
+NewnoteBut.addEventListener('click', newnotetoggle);
