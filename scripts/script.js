@@ -9,7 +9,7 @@ const DM_titleheader = document.querySelector('h1')
 const DM_headerlinks = document.querySelectorAll('#Ulist li a')
 
 // sidebar
-const DM_sidebar = document.querySelector('.sidebar')
+const DM_sidebar = document.querySelector('aside')
 const DM_noteheader = document.querySelector('h2')
 const DM_sidebullets = document.querySelector('ul')
 const DM_sidenotes = document.querySelectorAll('aside ul li')
@@ -56,13 +56,12 @@ darkmodebutton.addEventListener('click', toggledark)
 // ====== CANCEL BUTTON FUNCTIONALITY ==========
 // ====== constants ========
 const CancelBut = document.querySelector('.Cancel')
-const textbox = document.querySelector('main') // textbox
+const textbox = document.querySelector('main textarea') // textbox
 const bottom_buttons = document.querySelector('.buttons-bot') // save and cancel buttons
 
 function cancel(){
    textbox.style.visibility = 'hidden'
    bottom_buttons.style.visibility = 'hidden'
-   textarea.style.visibility = 'hidden'
 }
 CancelBut.addEventListener('click', cancel);
 
@@ -75,8 +74,6 @@ const NewnoteBut = document.querySelector('.Newnote')
 function newnotetoggle(){
    textbox.style.visibility = 'visible'
    bottom_buttons.style.visibility = 'visible'
-   textarea.style.visibility = 'visible'
-   textarea.value.toggle('main');
 }
 NewnoteBut.addEventListener('click', newnotetoggle);
 
@@ -97,29 +94,31 @@ const saveBut = document.querySelector('.Save')
 
 function save(){
    let titleName = prompt('Save note title as?:');
-   let generated_note = {title: titleName, body: textarea.value};
+   let generated_note = {title: titleName, body: textbox.value};
    ArrayNotes.push(generated_note);
-   notelistAppend();
+   noteListAppend();
 }
 saveBut.addEventListener('click' , save);
 
-function notelistAppend(){
+function noteListAppend(){
    let listing = document.createElement('li');
-   sidebar_notes.append(listing);
-   listing.value === titleName
-
+   sidebar_notes.appendChild(listing);
+   let createnote = document.createTextNode(titleName)
+   listing.textContent = createnote
 }
+
 //=========== Note Displaying Inquiry =======================
-sidebar_notes.addEventListener('click', Note_Display);
+
 function Note_Display(inquiry){
    var notetitle_Search = inquiry.target.innerText
    for (var i = 0; i < ArrayNotes.length; i++)
    {
-      if (ArrayNotes[i].textContent === notetitle_Search){
-         textarea.value = ArrayNotes[i].body
+      if (ArrayNotes[i].title === notetitle_Search){
+         textbox.value = ArrayNotes[i].body
       }
    } 
-}
+}   sidebar_notes.addEventListener('click', Note_Display);
+
 
 
 

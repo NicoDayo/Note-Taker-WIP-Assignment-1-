@@ -14,7 +14,7 @@ aside li:hover{
 color: rgb(255, 0, 204);
 }
 
-.sidebar{
+aside{
      margin: 0px;
      font-family:'Montserrat', sans-serif;
      font-weight: bold;
@@ -167,33 +167,20 @@ footer{
     body{
         display:grid;
         margin: 0px;
-        background-color: #effbf2;
         grid-template-columns: 20% 4fr;
     }
-    aside ul{
-        list-style: square;
-    }
 
-    h1, h2{
-        text-align: center;
-        color: #483D8B;
-        font-family: 'Montserrat', sans-serif;
-        font-size: 50px;
-        padding: 20px;
-    }
-    li{
-        margin: 9px;
-    }
+    h1, h2{font-size: 50px;}
+
     #mainpagecontainer
         {
     display:grid;
     grid-template-rows: 200px 50px 200px 100px 50px;
     grid-template-columns: 4fr;
     }
+    
     header #Ulist{
         display: flex;
-        font-family: 'Montserrat', sans-serif;
-        list-style: none;
         font-size: 18px;
         justify-content: flex-end;
     }
