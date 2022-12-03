@@ -83,9 +83,9 @@ NewnoteBut.addEventListener('click', newnotetoggle);
 
 let ArrayNotes = 
 [{title:"Note One",
-   body:"this is the 1st note"},
+   body:"This is the 1st note"},
 {title:"Note Two",
-   body:"this is the 2nd note"}
+   body:"This is the 2nd note"}
 ]
 
 //======== SAVE FUNCTIONALITY =========
@@ -93,19 +93,18 @@ const sidebar_notes = document.querySelector('aside ul')
 const saveBut = document.querySelector('.Save')
 
 function save(){
-   let titleName = prompt('Save note title as?:');
-   let generated_note = {title: titleName, body: textbox.value};
+   let saveName = prompt('Save note title as?:');
+   let generated_note = {title:saveName, body:textbox.value};
    ArrayNotes.push(generated_note);
    noteListAppend();
+   function noteListAppend(){
+      var listing = document.createElement('li');
+      var createNote = document.createTextNode(saveName);
+      listing.appendChild(createNote);
+      sidebar_notes.appendChild(listing);
+   }
 }
 saveBut.addEventListener('click' , save);
-
-function noteListAppend(){
-   let listing = document.createElement('li');
-   sidebar_notes.appendChild(listing);
-   let createnote = document.createTextNode(titleName)
-   listing.textContent = createnote
-}
 
 //=========== Note Displaying Inquiry =======================
 

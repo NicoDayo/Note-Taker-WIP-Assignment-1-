@@ -11,7 +11,7 @@
     list-style: square;
 }
 aside li:hover{
-color: rgb(255, 0, 204);
+color: #ff00cc;
 }
 
 aside{
@@ -178,7 +178,7 @@ footer{
     grid-template-rows: 200px 50px 200px 100px 50px;
     grid-template-columns: 4fr;
     }
-    
+
     header #Ulist{
         display: flex;
         font-size: 18px;
