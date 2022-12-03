@@ -1,58 +1,71 @@
 /* ===MOBILE VERSION - for dimensions less than 600px*/
+ body{
+     display:grid;
+     margin: 0px;
+     background-color: #effbf2;
+     grid-template-columns: 30% 100px;
+ }
 
-body{
-    background-color: #effbf2;
-    display:grid;
-    grid-template-columns:0.5fr 1fr 1fr;
-    grid-template-rows: 1fr;
+ /* SIDEBAR */
+ aside ul{
+    list-style: square;
+}
+aside li:hover{
+color: #ff00cc;
 }
 
 aside{
-    background-color: #b6f6d9;
-    border-radius: 5px;
-    grid-row: 1/8;
-    grid-column: 1/2;
-    }
+     margin: 0px;
+     font-family:'Montserrat', sans-serif;
+     font-weight: bold;
+     color: #483D8B;
+     background-color: #b6f6d9;
+     font-size: 18px;
+     grid-column: 1;
+     height: 100vh;
+}
 
-h1, h2
-{   text-align: center;
-    color: #483D8B;
+ h1, h2{
+     text-align: center;
+     color: #483D8B;
+     font-family: 'Montserrat', sans-serif;
+     font-size: 30px;
+     padding: 20px;
+}
+
+ li{
+     margin: 9px;
+}
+
+/* Everything besides the sidebar */
+#mainpagecontainer{
+    display:grid;
+    grid-template-columns: 325px;
+    grid-template-rows: 150px 50px 150px 100px 50px;
+}
+
+header #Ulist{
+    display: flex;
     font-family: 'Montserrat', sans-serif;
-    font-size: 36px;
-    padding: 20px;
+    list-style: none;
+    font-size: 16px;
 }
 
-#Ulist
-        {
-            font-family: 'Montserrat', sans-serif;
-            display: flex;
-            list-style: none;
-            font-size: 16px;
-            padding-top: 100px;
-        }
-
-#Ulist2
-        {
-            font-family: 'Montserrat', sans-serif;
-            display: flex;
-            list-style: square;
-            flex-direction: column;
-            justify-content: center;
-            font-size: 14px;
-            padding: 10px;
-        }
-
-li{
-margin: 9px;
+textarea{
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+border: solid 7px;
+border-color: #483D8B;
+border-radius: 10px;
+font-size: 18px;
 }
 
-#textbox{
-display: grid;
-margin: 20px;
-grid-column: 1/4;
+main{
+    display: grid;
+    margin: 20px;
 }
 
-#Newnote {
+button{
     border: 0;
     height: 40px;
     padding: 0 20px;
@@ -60,220 +73,137 @@ grid-column: 1/4;
     text-align: center;
     color: white;
     border-radius: 12px;
-    background-color: #10A5E5;
-
-}
-#Darkmode {
-    border: 0;
-    height: 40px;
-    padding: 0 20px;
-    font-size: 14px;
-    text-align: center;
-    color: white;
-    border-radius: 12px;
-    background-color: grey;
-
 }
 
-#Newnote:hover {
-    background-color:#0F97D2;
+ .Newnote {
+     background-color: #10A5E5;
 }
 
-#Darkmode:hover {
-    background-color:black;
+ .Darkmode {
+     background-color: grey;
 }
 
 .buttons-top{
     display: flex;
-    justify-content: space-between;
     padding: 10px;
     gap: 20px;
 }
 
-#Cancel {
-    border: 0;
-    height: 40px;
-    padding: 0 20px;
-    font-size: 14px;
-    text-align: center;
-    color: white;;
-    border-radius: 12px;
-    background-color: #2883A4;
-
-}
-#Save {
-    border: 0;
-    height: 40px;
-    padding: 0 20px;
-    font-size: 14px;
-    text-align: center;
-    color: white;
-    text-shadow: 1px 1px 3px grey;
-    border-radius: 12px;
-    background-color: #E97BAB;
-
+ .Newnote:hover {
+     background-color:#0F97D2;
 }
 
-#Save:hover {
-    background-color:#E1357F;
+ .Darkmode:hover {
+     background-color:black;
 }
 
-#Cancel:hover {
-    background-color: #16495B;
+
+ .Cancel {
+     background-color: #2883A4;
+}
+
+ .Save {
+     background-color: #E97BAB;
 }
 
 .buttons-bot{
     display: flex;
-    justify-content: flex-end;
-    gap: 30px;
-padding: 20px;
+    gap: 20px;
+    padding: 20px;
+}
+
+ .Save:hover {
+     background-color:#E1357F;
+}
+
+ .Cancel:hover {
+     background-color: #16495B;
 }
 
 footer{
-display: flex;
-justify-content: center;
-grid-row: 3/5;
-padding-bottom: 400px;
+    display: flex;
+    justify-content: center;
+}
+
+/*================= JS darktoggle classes ===================== */
+
+.darkmain{
+    background-color: #000000;
+}
+
+.darksidebar{
+    background-color: #380202;
+}
+
+.darkmodefont{
+    color: #f2f4f5;
+}
+
+.darktext{
+    background-color: #1a0d0d;
+    color:#ffffff;
+    border-color: #6d6c6c;
+}
+
+.dark_newnote{
+    background-color:#022839;
+}
+
+.dark_darkmode{
+    background-color: #414040;
+}
+
+.dark_save{
+    background-color: darkred;
+}
+
+.dark_cancel{
+    background-color: #1d135e;
 }
 
 
 /* DESKTOP VERSION */
-
-@media (min-width: 600px)
-{
+@media only screen and (min-width: 600px){
     body{
-        height: 100%;
-        background-color: #effbf2;
         display:grid;
-        grid-template-columns: 0.5fr 3fr 1fr;
-        grid-template-rows: 0.5fr 3fr;
+        margin: 0px;
+        grid-template-columns: 20% 4fr;
     }
 
-    h1, h2
-    {   text-align: center;
-        color: #483D8B;
-        font-family: 'Montserrat', sans-serif;
-        font-size: 36px;
-        padding: 20px;
+    h1, h2{font-size: 50px;}
+
+    #mainpagecontainer
+        {
+    display:grid;
+    grid-template-rows: 200px 50px 200px 100px 50px;
+    grid-template-columns: 4fr;
     }
 
-    aside{
-        background-color: #b6f6d9;
-        border-radius: 5px;
-        grid-row: 1/5;
-        grid-column: 1/2;
-        padding-bottom: 425px;
-        }
-
-    #Ulist
-            {
-                font-family: 'Montserrat', sans-serif;
-                display: flex;
-                list-style: none;
-                justify-content: flex-end;
-                font-size: 16px;
-                padding-top: 50px;
-            }
-
-    #Ulist2
-            {
-                font-family: 'Montserrat', sans-serif;
-                display: flex;
-                list-style: square;
-                flex-direction: column;
-                justify-content: center;
-                font-size: 14px;
-                padding: 10px;
-            }
-
-    li{
-    margin: 9px;
+    header #Ulist{
+        display: flex;
+        font-size: 18px;
+        justify-content: flex-end;
     }
-
-    #textbox{
-    margin: 20px;
-    }
-
-
-    #Newnote {
-        border: 0;
-        height: 40px;
-        padding: 0 20px;
-        font-size: 14px;
-        text-align: center;
-        color: white;
-        border-radius: 12px;
-        background-color: #10A5E5;
-
-    }
-    #Darkmode {
-        border: 0;
-        height: 40px;
-        padding: 0 20px;
-        font-size: 14px;
-        text-align: center;
-        color: white;
-        border-radius: 12px;
-        background-color: grey;
-
-    }
-
-    #Newnote:hover {
-        background-color:#0F97D2;
-    }
-
-    #Darkmode:hover {
-        background-color:black;
+    main{
+        display: grid;
+        margin: 20px;
     }
 
     .buttons-top{
         display: flex;
+        padding: 10px;
+        gap: 20px;
+        margin: 10px;
         justify-content: space-between;
-    padding: 20px;
-    }
-
-    #Cancel {
-        border: 0;
-        height: 40px;
-        padding: 0 20px;
-        font-size: 14px;
-        text-align: center;
-        color: white;;
-        border-radius: 12px;
-        background-color: #2883A4;
-
-    }
-    #Save {
-        border: 0;
-        height: 40px;
-        padding: 0 20px;
-        font-size: 14px;
-        text-align: center;
-        color: white;
-        text-shadow: 1px 1px 3px grey;
-        border-radius: 12px;
-        background-color: #E97BAB;
-
-    }
-
-    #Save:hover {
-        background-color:#E1357F;
-    }
-
-    #Cancel:hover {
-        background-color: #16495B;
     }
     .buttons-bot{
         display: flex;
+        gap: 20px;
+        padding: 20px;
         justify-content: flex-end;
-        gap: 30px;
-    padding: 20px;
     }
-
     footer{
-    display: flex;
-    justify-content: center;
-    grid-row: 3/5;
-    padding-bottom:90px;
+        display: flex;
+        justify-content: center;
     }
 }
