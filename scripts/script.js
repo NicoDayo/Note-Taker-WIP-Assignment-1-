@@ -1,7 +1,8 @@
-// ====== DARK MODE CONSTANTS =============
+// ====== DARK MODE FUNCTIONALITY AND CONSTANTS =============
 // main parts
 const darkmodebutton = document.querySelector(".Darkmode")
 const DM_body = document.querySelector('body')
+const DM_textcontainer = document.querySelector('textarea')
 
 // Title header and links
 const DM_titleheader = document.querySelector('h1')
@@ -11,7 +12,7 @@ const DM_headerlinks = document.querySelectorAll('#Ulist li a')
 const DM_sidebar = document.querySelector('.sidebar')
 const DM_noteheader = document.querySelector('h2')
 const DM_sidebullets = document.querySelector('ul')
-const DM_sidenotes = document.querySelectorAll('aside ul li a')
+const DM_sidenotes = document.querySelectorAll('aside ul li')
 
 // buttons
 const DM_newnote = document.querySelector('.Newnote')
@@ -26,6 +27,7 @@ function toggledark()
    DM_noteheader.classList.toggle('darkmodefont')
    DM_sidebullets.classList.toggle('darkmodefont')
    DM_sidebar.classList.toggle('darksidebar')
+   DM_textcontainer.classList.toggle('darktext')
 
    DM_newnote.classList.toggle('dark_newnote')
    DM_darkmode.classList.toggle('dark_darkmode')
@@ -48,6 +50,9 @@ function toggledark()
 };
 darkmodebutton.addEventListener('click', toggledark)
 
+//========================================================================
+
+
 // ====== CANCEL BUTTON FUNCTIONALITY ==========
 // ====== constants ========
 const CancelBut = document.querySelector('.Cancel')
@@ -57,8 +62,11 @@ const bottom_buttons = document.querySelector('.buttons-bot') // save and cancel
 function cancel(){
    textbox.style.visibility = 'hidden'
    bottom_buttons.style.visibility = 'hidden'
+   textarea.style.visibility = 'hidden'
 }
 CancelBut.addEventListener('click', cancel);
+
+
 
 //======= New Note Toggle ============
 
@@ -67,5 +75,55 @@ const NewnoteBut = document.querySelector('.Newnote')
 function newnotetoggle(){
    textbox.style.visibility = 'visible'
    bottom_buttons.style.visibility = 'visible'
+   textarea.style.visibility = 'visible'
+   textarea.value.toggle('main');
 }
 NewnoteBut.addEventListener('click', newnotetoggle);
+
+
+
+//============ NOTE ARRAY =================
+
+let ArrayNotes = 
+[{title:"Note One",
+   body:"this is the 1st note"},
+{title:"Note Two",
+   body:"this is the 2nd note"}
+]
+
+//======== SAVE FUNCTIONALITY =========
+const sidebar_notes = document.querySelector('aside ul')
+const saveBut = document.querySelector('.Save')
+
+function save(){
+   let titleName = prompt('Save note title as?:');
+   let generated_note = {title: titleName, body: textarea.value};
+   ArrayNotes.push(generated_note);
+   notelistAppend();
+}
+saveBut.addEventListener('click' , save);
+
+function notelistAppend(){
+   let listing = document.createElement('li');
+   sidebar_notes.append(listing);
+   listing.value === titleName
+
+}
+//=========== Note Displaying Inquiry =======================
+sidebar_notes.addEventListener('click', Note_Display);
+function Note_Display(inquiry){
+   var notetitle_Search = inquiry.target.innerText
+   for (var i = 0; i < ArrayNotes.length; i++)
+   {
+      if (ArrayNotes[i].textContent === notetitle_Search){
+         textarea.value = ArrayNotes[i].body
+      }
+   } 
+}
+
+
+
+
+
+
+

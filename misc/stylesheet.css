@@ -10,11 +10,17 @@
  aside ul{
     list-style: square;
 }
+aside li:hover{
+color: rgb(255, 0, 204);
+}
+
 .sidebar{
      margin: 0px;
-     font-family: 'Montserrat', sans-serif;
+     font-family:'Montserrat', sans-serif;
+     font-weight: bold;
+     color: #483D8B;
      background-color: #b6f6d9;
-     font-size: 14px;
+     font-size: 18px;
      grid-column: 1;
      height: 100vh;
 }
@@ -46,10 +52,12 @@ header #Ulist{
 }
 
 textarea{
-display: grid;
-border: solid;
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+border: solid 7px;
 border-color: #483D8B;
-border-radius: 6px;
+border-radius: 10px;
+font-size: 18px;
 }
 
 main{
@@ -131,6 +139,12 @@ footer{
     color: #f2f4f5;
 }
 
+.darktext{
+    background-color: #1a0d0d;
+    color:#ffffff;
+    border-color: #6d6c6c;
+}
+
 .dark_newnote{
     background-color:#022839;
 }
@@ -187,12 +201,7 @@ footer{
         display: grid;
         margin: 20px;
     }
-    textarea{
-        display: flex;
-    border: solid;
-    border-color: #483D8B;
-    border-radius: 6px;
-    }
+
     .buttons-top{
         display: flex;
         padding: 10px;
