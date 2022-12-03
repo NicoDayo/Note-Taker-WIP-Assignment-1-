@@ -74,6 +74,10 @@ const NewnoteBut = document.querySelector('.Newnote')
 function newnotetoggle(){
    textbox.style.visibility = 'visible'
    bottom_buttons.style.visibility = 'visible'
+   if (textbox.style.visibility == 'visible'){
+      textbox.value = ''
+   }
+   
 }
 NewnoteBut.addEventListener('click', newnotetoggle);
 
